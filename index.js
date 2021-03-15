@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 
-// get instagram img todo
+//get instagram img todo
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -9,7 +9,14 @@ const puppeteer = require('puppeteer');
 
 
   await page.evaluate (()=> {
+      const nodeList = document.querySelectorAll("article img");
+      const imgArray = [...nodeList];
 
+      const list = imgArray.map( ({src}) => {
+          src
+      })
+
+      console.log(list);
   })
 
   await browser.close();
@@ -20,7 +27,7 @@ const puppeteer = require('puppeteer');
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.wikipedia.com/Coronavirus/');
+    await page.goto('https://pt.wikipedia.org/wiki/Coronav%C3%ADrus');
 
     const result = await page.evaluate(() => {
         let headingFroWeb = document.querySelectorAll(".mw-headline");
