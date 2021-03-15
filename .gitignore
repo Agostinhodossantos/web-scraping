@@ -1,1 +1,8 @@
+# Dependency directories
 node_modules/
+
+#System files
+.DS_Store
+
+# genereted json
+instagram.json
