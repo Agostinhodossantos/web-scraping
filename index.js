@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-
 //get instagram img todo
 (async () => {
   const browser = await puppeteer.launch({headless:false});
