@@ -6,3 +6,6 @@ node_modules/
 
 # genereted json
 instagram.json
+
+# env
+.env
